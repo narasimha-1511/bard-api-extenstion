@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Bard -- Cheater's Edition",
+    "description": "This Extension allows you to cheat happily ...",
+    "version": "1.0",
+    "permissions": ["tabs","scripting"],
+    "action": {
+      "default_title": "Bard -- Cheater's Edition",
+      "default_icon": "images/icon.png",
+      "default_popup": "popup.html"
+    },
+    "web_accessible_resources":[{
+      "resources":[
+          "./cdn/ai-bard-cdn.js"
+    ],
+    "matches": [ "https://example.com/*" ]
+    }],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js":["contentScript.js"]
+      }
+    ],
+    "background": {
+      "matches": ["https://github.com/*"],
+      "service_worker": "background.js",
+      "type": "module"
+    }
+  }

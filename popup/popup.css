@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
-    padding: 20px;
+    padding: 10px;
 }
 
 #chatbox {
@@ -13,6 +13,7 @@ body {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
 .user-message {
@@ -25,6 +26,8 @@ body {
     display: inline-block;
     max-width: 80%;
     overflow-wrap: break-word;
+    float: right;
+    clear: both;
 }
 
 .bot-message {
@@ -37,15 +40,33 @@ body {
     display: inline-block;
     max-width: 80%;
     overflow-wrap: break-word;
+    float: left;
+    clear: both;
+}
+
+.versions{
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+}
+
+.bot-message pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 #user-input {
-    width: 300px;
+    width: 88%;
     padding: 10px 20px;
     border: none;
-    border-radius: 50px;
-    margin-top: 20px;
+    border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
 }
 
 button {
@@ -53,9 +74,9 @@ button {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 50px;
+    border-radius: 25px;
     cursor: pointer;
-    margin-left: 10px;
+    width: 100%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }

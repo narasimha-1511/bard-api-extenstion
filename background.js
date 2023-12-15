@@ -323,8 +323,8 @@ async function TeluguTexttoTextPrompt(prompt) {
   });
 
   try {
-    const result = await chat.sendMessage("hi ra");
-    const response = await result.response;
+    const result = await chat.sendMessage(prompt);
+    const response = result.response;
     console.log(response.text());
     return response.text();
   } catch (err) {
